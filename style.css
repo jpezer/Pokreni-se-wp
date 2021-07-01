@@ -1,0 +1,221 @@
+/* 
+Theme name: Pokreni se
+Author:Josip Pezer
+Version: 1.0
+Description: Simple blog theme
+*/
+@import url('https://fonts.googleapis.com/css2?family=Faster+One&family=Montserrat:wght@300;400;700;900&display=swap');
+:root {
+    --bodyFont: 'Montserrat', sans-serif;
+    --primaryColor: #272b34;
+    --secondaryColor: #8df48b;
+    --accents: #d85080;
+    --white: #fff;
+    --lightGray: #f1f1f1;
+    --font: 16px;
+    --textShadow: 5px 5px 20px var(--primaryColor);
+    --transition: .5s ease;
+}
+body {
+    font-family: var(--bodyFont);
+    font-size: var(--font);
+    background: var(--primaryColor); 
+}
+h1, h2, h3, h4 {
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+h2 {
+    font-size: 3rem;
+}
+h2::after{
+    display: block;
+    content: "";
+    width: 20%;
+    height: 5px;
+    background: var(--secondaryColor);
+    margin: 30px auto;
+}
+.alert-success{
+    background:var(--secondaryColor)!important;
+}
+.btn-danger{
+    background:var(--accents)!important;
+    border: none;
+}
+.btn-danger:hover{
+    background:var(--primaryColor)!important;
+}
+/****************
+mainHeader
+*****************/
+.mainHeader{
+    background-image: url(img/header.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+}
+nav{
+    position: relative;
+    top: 50px;
+}
+.mainHeader hgroup{
+    margin-top: 150px;
+}
+hgroup h1{
+    font-size: 6rem;
+    color: var(--secondaryColor);
+    text-shadow: var(--textShadow);
+}
+.navbar-brand{
+    background-color: var(--secondaryColor);
+    padding: 10px;
+    color: var(--primaryColor);
+    text-transform: uppercase;
+    font-weight: 900;
+    font-family: 'Faster One', cursive;
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+.navbar{
+    padding:0 10px 0 0;
+    border-bottom: 5px solid var(--secondaryColor);
+    background-color: var(--primaryColor)!important;
+}
+.navbar-brand:hover{
+    background-color: var(--primaryColor);
+    color: var(--secondaryColor)!important;
+    transition: var(--transition);
+}
+.nav-link{
+    color: var(--secondaryColor) !important;
+    text-transform: uppercase;
+}
+.nav-link:hover{
+    color: var(--white)!important;
+}
+/* .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+    color: var(--white)!important;
+} */
+
+/****************
+uvod
+*****************/
+.uvod{
+    background: var(--primaryColor);
+}
+/****************
+teme
+*****************/
+.teme{
+    background: var(--secondaryColor);
+}
+.teme h2::after{
+    background: var(--primaryColor);
+}
+.teme i{
+    background: var(--primaryColor);
+    color: var(--white);
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    font-size: 4rem;
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+
+}
+
+/****************
+cta
+*****************/
+.cta{
+    background-image:linear-gradient(rgba(241,241,241,.8),rgba(241,241,241,.8)), url(img/cta.jpg);
+    background-position: center;
+    background-size: cover;
+    color: var(--primaryColor);
+    padding: 100px 0;
+}
+.cta h2::after{
+    background: var(--accents);
+}
+/****************
+footer
+*****************/
+footer{
+    background: var(--primaryColor);
+    color: var(--white);
+}
+
+/****************
+blog page css
+*****************/
+
+/****************
+blogHeader
+*****************/
+.blogHeader{
+    background-image: url(img/blog_header.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+}
+.blogHeader hgroup{
+    margin-top: 150px;
+}
+/* .blog{
+
+} */
+.blog .text{
+    background: var(--secondaryColor);
+    width: 90%;
+    margin: 0 auto;
+    padding: 30px;
+    position: relative;
+    top: -50px;
+    border-radius: 0 0 50px 0;
+    text-align: justify;
+
+}
+.featured-image{
+    position: relative;
+}
+.featured-image img{
+    border-radius: 50px 0 0 0;
+    width: 100%;
+    height: auto;
+}
+.meta{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background: var(--secondaryColor);
+    border-radius: 3px;
+    padding: 5px;
+    border: 1px solid var(--primaryColor);
+}
+.meta a{
+    color: var(--primaryColor);
+    text-decoration: underline;
+}
+.meta a:hover{
+    text-decoration: none;
+}
+
+.widget{
+    background: var(--secondaryColor);
+    line-height: 2;
+    border-radius: 50px 0 50px 0;
+}
+.widget ul{
+    list-style: none;
+}
+.widget ul li a{
+    color: var(--primaryColor);
+    border-bottom: 1px solid var(--primaryColor);
+}
+.widget ul li a:hover{
+    border-bottom: none;
+    text-decoration: none;
+}
+/****************
+
+*****************/
